@@ -1,10 +1,15 @@
-import { Button } from "@mui/material";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Products from "./components/Products";
 
 function App() {
   return (
     <>
-      <Button variant="contained">Click me</Button>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/products" element={<Products />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
